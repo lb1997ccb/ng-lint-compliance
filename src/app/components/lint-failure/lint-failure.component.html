@@ -1,0 +1,25 @@
+<!-- Rule Violation: @angular-eslint/template/alt-text -->
+<img src="example.jpg" width="100" height="100">
+
+<!-- Rule Violation: @angular-eslint/template/label-has-associated-control -->
+<form>
+  <label for="username">Username:</label>
+  <input type="text" id="username">
+  <button type="submit">Submit</button>
+</form>
+
+<!-- Rule Violation: valid-aria -->
+<div aria-roldesc="text">Text</div>
+
+<!-- Rule Violation: no-autofocus -->
+<input type="text" autofocus>
+
+<!-- Rule Violation: no-distracting-elements -->
+<marquee>Scrolling text...</marquee>
+
+<!-- Rule Violation: use-track-by-function (Angular ngFor TrackBy) -->
+<ul>
+  <li *ngFor="let item of items">{{ item.name }}</li>
+</ul>
+
+

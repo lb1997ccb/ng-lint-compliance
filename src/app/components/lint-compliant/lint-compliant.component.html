@@ -1,0 +1,35 @@
+<!-- Fixed: @angular-eslint/template/alt-text -->
+<img src="example.jpg" alt="Description of the image" width="100" height="100">
+
+<!-- Fixed: @angular-eslint/template/label-has-associated-control -->
+<form>
+  <label for="username">Username:</label>
+  <input type="text" id="username" aria-labelledby="username-label">
+  <button type="submit">Submit</button>
+</form>
+
+<!-- Fixed: valid-aria -->
+<div role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">Slider</div>
+
+<!-- Fixed: no-autofocus -->
+<input type="text">
+
+<!-- Fixed: no-distracting-elements -->
+<div>Text</div>
+
+<!-- Fixed: use-track-by-function (Angular ngFor TrackBy) -->
+<ul>
+  <li *ngFor="let item of items; trackBy: trackByFn">{{ item.name }}</li>
+</ul>
+
+<div>
+  <button (click)="onClick()">Click me</button>
+  <button (click)="emptyFunction()">Call Empty Function</button>
+  <button (click)="evalExample()">Run Eval Example</button>
+  <button (click)="withStatementExample({})">Run With Statement Example</button>
+  <button (click)="unnecessaryVar()">Run Unnecessary Var Example</button>
+  <button (click)="bindExample()">Run Bind Example</button>
+  <button (click)="newObject()">Run New Object Example</button>
+  <button (click)="unnecessaryStringConstructor()">Run Unnecessary String Constructor Example</button>
+  <button (click)="deprecatedAPI()">Run Deprecated API Example</button>
+</div>

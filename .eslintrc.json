@@ -1,0 +1,184 @@
+{
+  "root": true,
+  "ignorePatterns": ["projects/**/*"],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+        // Possible Errors
+        "@typescript-eslint/explicit-function-return-type": [
+          "error",
+          {
+            "allowExpressions": true
+          }
+        ],
+        "no-await-in-loop": "error",
+        "no-extra-parens": "error",
+        "no-prototype-builtins": "error",
+        "no-template-curly-in-string": "error",
+        // Removed deprecated rule "valid-jsdoc"
+        "valid-jsdoc": "off",
+        // Best Practices
+        "@typescript-eslint/array-type": [
+          "error",
+          {
+            "default": "generic"
+          }
+        ],
+        "accessor-pairs": "error",
+        "no-unused-vars": "off",
+        // Disables general no-unused-vars rule
+        "@typescript-eslint/no-unused-vars": [
+          "warn",
+          {
+            "vars": "all",
+            "args": "none",
+            // Ignores all function arguments
+            "ignoreRestSiblings": true,
+            "caughtErrors": "none",
+            "varsIgnorePattern": "^_",
+            // Ignores variables with _ prefix
+            "argsIgnorePattern": "^_"
+            // Ignores parameters with _ prefix
+          }
+        ],
+        "array-callback-return": "error",
+        "block-scoped-var": "error",
+        "class-methods-use-this": "off",
+        "complexity": "error",
+        "consistent-return": "error",
+        "curly": "error",
+        "default-case": "error",
+        "dot-location": ["error", "property"],
+        /**
+        The "no-console" rule is configured to issue warnings ("warn") for console.log statements in the codebase.
+        Other console methods like console.warn and console.error are explicitly allowed.
+        **/
+        "no-console": [
+          "warn",
+          {
+            "allow": ["warn", "error"]
+          }
+        ],
+        "dot-notation": "warn",
+        "eqeqeq": "error",
+        "guard-for-in": "error",
+        "no-alert": "error",
+        "no-caller": "error",
+        "no-div-regex": "error",
+        "no-else-return": "error",
+        "no-empty-function": "off",
+        "no-eq-null": "error",
+        "no-eval": "error",
+        "no-extend-native": "error",
+        "no-extra-bind": "error",
+        "no-extra-label": "error",
+        "no-floating-decimal": "error",
+        "no-implicit-coercion": "error",
+        "no-implicit-globals": "error",
+        "no-implied-eval": "error",
+        "no-invalid-this": "off",
+        "no-iterator": "error",
+        "no-labels": "error",
+        "no-lone-blocks": "error",
+        "no-loop-func": "error",
+        "no-magic-numbers": [
+          "error",
+          {
+            "ignore": [-1, 0, 1],
+            "ignoreArrayIndexes": true
+          }
+        ],
+        "no-multi-spaces": [
+          "error",
+          {
+            "ignoreEOLComments": true,
+            "exceptions": {
+              "AssignmentExpression": true,
+              "ArrowFunctionExpression": true,
+              "CallExpression": true,
+              "VariableDeclarator": true
+            }
+          }
+        ],
+        "no-multi-str": "error",
+        "no-new": "error",
+        "no-new-func": "error",
+        "no-new-wrappers": "error",
+        "no-octal-escape": "error",
+        "no-param-reassign": "off",
+        "no-proto": "error",
+        "no-restricted-properties": "error",
+        "no-return-assign": "error",
+        "no-return-await": "error",
+        "no-script-url": "error",
+        "no-self-compare": "error",
+        "no-sequences": "error",
+        "no-throw-literal": "error",
+        "no-unmodified-loop-condition": "error",
+        "no-unused-expressions": "error",
+        "no-useless-call": "error",
+        "no-useless-concat": "error",
+        "no-useless-return": "error",
+        "no-void": "error",
+        "no-warning-comments": "off",
+        "no-with": "error",
+        "prefer-promise-reject-errors": "error",
+        "radix": "error",
+        "require-await": "error",
+        "vars-on-top": "error",
+        "wrap-iife": "error",
+        "yoda": "error",
+        // Strict Mode
+        "strict": "error",
+        // Variables
+        "init-declarations": "off",
+        "no-catch-shadow": "error",
+        "no-label-var": "error",
+        "no-restricted-globals": "error",
+        "no-shadow": "off",
+        "no-shadow-restricted-names": "error",
+        "no-undef-init": "error",
+        "no-undefined": "off",
+        "no-use-before-define": "off",
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.html"],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended",
+        "plugin:@angular-eslint/template/accessibility"
+      ],
+      "rules": {
+        "@angular-eslint/template/label-has-associated-control": "error",
+        "@angular-eslint/template/valid-aria": "error",
+        "@angular-eslint/template/alt-text": "error",
+        "@angular-eslint/template/no-autofocus": "error",
+        "@angular-eslint/template/no-distracting-elements": "error",
+        "@angular-eslint/template/use-track-by-function": "error"
+      }
+    }
+  ]
+}
