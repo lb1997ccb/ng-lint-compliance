@@ -24,10 +24,6 @@ To get started with this project, follow these steps:
   npm start
   ```
 
-# Angular ESLint Template Project
-
-## Getting Started
-
 This command builds the application and serves it locally. Open your browser and navigate to [http://localhost:4200/](http://localhost:4200/) to see the application in action.
 
 ## ESLint Configuration
