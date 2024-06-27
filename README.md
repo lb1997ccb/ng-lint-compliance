@@ -10,7 +10,7 @@ To get started with this project, follow these steps:
 
   ```bash
   git clone <repository_url>
-  cd ng-lint-compliance
+  cd ng-lint-starter-kit
   ```
 
 2. **Install dependencies:**
